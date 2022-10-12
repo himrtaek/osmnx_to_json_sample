@@ -1,6 +1,7 @@
 import environment_processor
 import land_processor
 import osm_downloader
+import simplify
 import way_processor
 
 
@@ -13,10 +14,12 @@ def main(place, directory, force):
 
     land_processor.main(directory)
 
+    simplify.main(directory)
+
 
 if __name__ == '__main__':
-    Place = 'Seoul'
-    Directory = 'Seoul'
+    Place = '영등포구 서울 대한민국'
+    Directory = 'Yeongdeungpo'
     Force = False
 
     print(f'Place:{Place}')

@@ -5,24 +5,24 @@ import osm_util
 
 
 def main(directory):
-    boundary_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Boundary.txt')
-    # way_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Way.txt')
-    water_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Water.txt')
-    grass_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Grass.txt')
-    garden_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Garden.txt')
-    park_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Park.txt')
-    wood_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Wood.txt')
-    farm_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Farm.txt')
-    land_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Land.txt')
-    # building_polygon_list = osm_util.import_wkt(f'{directory}/Polygons_Building.txt')
+    boundary_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Boundary.txt')
+    # way_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Way.txt')
+    water_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Water.txt')
+    grass_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Grass.txt')
+    garden_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Garden.txt')
+    park_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Park.txt')
+    wood_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Wood.txt')
+    farm_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Farm.txt')
+    # land_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Land.txt')
+    # building_polygon_list = osm_util.import_wkt(f'{directory}/Simple_Polygons_Building.txt')
 
     fig, axs = plt.subplots()
 
     for it in boundary_polygon_list:
         draw_util.plot_polygon(axs, it, alpha=0.1, fc='grey', linewidth=0.1)
 
-    for it in land_polygon_list:
-        draw_util.plot_polygon(axs, it, alpha=0.2, fc='salmon', linewidth=0.1)
+    # for it in land_polygon_list:
+    #     draw_util.plot_polygon(axs, it, alpha=0.2, fc='salmon', linewidth=0.1)
 
     # for it in way_polygon_list:
     #     draw_util.plot_polygon(axs, it, alpha=0.2, fc='yellow', linewidth=0.1)
